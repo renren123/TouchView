@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         int RawX = (int) event.getRawX();
         int RawY = (int) event.getRawY();
         int testNumber = (int)event.getPointerCount();
+        int testNumber2 = (int)event.getEventTime();
         String msg = "";
         msg +="事件类型："+eventType+"\n";
         msg+="相对坐标："+String.valueOf(x)+","+String.valueOf(y)+"\n";
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         msg+="触点压力："+String.valueOf(pressure)+",";
         msg+="触点尺寸："+String.valueOf(size)+"\n";
         msg+="DownTime:"+String.valueOf(testNumber);
+        msg+="DownTime2:"+String.valueOf(testNumber2);
         labelView.setText(msg);
     }
     private int ProcessHistory(MotionEvent event)
